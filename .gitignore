@@ -40,3 +40,6 @@
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
+
+# Difference between arm & x86 processors
+Gemfile.lock
