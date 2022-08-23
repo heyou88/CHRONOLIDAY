@@ -1,1 +1,6 @@
 <h3>My bookings</h3>
+<% @bookings.each do |booking| %>
+      <%= link_to time_travel_bookings_path(booking) do %>
+           <%= booking.start_date %>
+            <% end %>
+            <% end %>
