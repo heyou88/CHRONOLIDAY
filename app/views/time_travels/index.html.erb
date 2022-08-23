@@ -1,1 +1,8 @@
 <h1> time travels </h1>
+<% @time_travels.each do |time_travel| %>
+      <%= link_to time_travel_path(time_travel) do %>
+           <%= time_travel.period_of_time %>
+            <% end %>
+            <% end %>
+<%= link_to "back to home page", root_path %>
+<%#<%= link_to "my bookings", time_travel_bookings_path(@time_travel) %>
