@@ -14,6 +14,7 @@
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <div class="container-fluid">
         <%= link_to "#", class: "navbar-brand" do %>
+          <%# <i class="fa-duotone fa-flux-capacitor"> %>
           <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
         <% end %>
 
@@ -47,8 +48,9 @@
         </div>
       </div>
     </div>
-
-    <%= yield %>
+    <div class="main-body">
+      <%= yield %>
+    </div>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
