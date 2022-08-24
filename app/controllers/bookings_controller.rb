@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  # how to see details of each time travel on the page of booking index?
   def index
     @bookings = Booking.all
   end
@@ -9,6 +10,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.save
+    # booking path set to the right path
     redirect_to booking_path(@booking)
   end
 
