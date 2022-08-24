@@ -1,8 +1,9 @@
-<h1> time travels </h1>
-<% @time_travels.each do |time_travel| %>
-      <%= link_to time_travel_path(time_travel) do %>
-           <%= time_travel.period_of_time %>
-            <% end %>
-            <% end %>
+<h1>See All Time travels </h1>
+
+<div class="cards">
+  <% @time_travels.each do |time_travel| %>
+  <%= render "layouts/shared/card_index", time_travel: time_travel  %>
+  <% end %>
+</div>
+
 <%= link_to "back to home page", root_path %>
-<%#<%= link_to "my bookings", time_travel_bookings_path(@time_travel) %>
