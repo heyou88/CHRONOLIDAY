@@ -35,3 +35,15 @@ body {
     height: 120px;
   }
 }
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 70%;
+  p {
+    text-align: justify;
+  }
+}
