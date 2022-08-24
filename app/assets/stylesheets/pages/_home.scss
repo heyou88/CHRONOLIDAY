@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body {
+  flex-grow: 1;
+}
