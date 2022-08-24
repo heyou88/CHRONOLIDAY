@@ -9,5 +9,12 @@
   <h2>What is this all about and why you should choose us</h2>
   <h5>  The time has come. After years of secret experimentation in a dusty Berlin Loft at Le Wagon, time travelling has become reality. Our company Chronoliday found a way to send you back in time and offer you a unique experience.
 For a period of one week you will live the life of a time traveller.  Our agents have selected some nice events from the past . If things get too dangerous you can always come back by activating the emergency button that we will implant you during your prep week.</h5>
+</div>
 
+<%# Show details of time travel events %>
+<div class="time_banner">
+  <% @time_travels.each do |time_travel| %>
+    <%= render "layouts/shared/card_index", time_travel: time_travel  %>
+  <% end %>
+  <%= link_to "Show all",  time_travels_path, class: "btn btn-primary" %>
 </div>
