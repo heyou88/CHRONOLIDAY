@@ -1,13 +1,12 @@
-<div class="content">
+<div class="content" data-controller="time-card">
   <div class= "image">
     <%#<%= image_tag "tangdynasty.jpg", alt: "tangdynasty", class: "image"  %>
-    <div class= "caption">
-      <h4><%= time_travel.name %></h4>
+    <div class="caption" data-action="mouseover->time-card#changeTextOn mouseout->time-card#changeTextOff">
+      <h4 data-time-card-target="name"><%= time_travel.name %></h4>
+      <h5 class="card-trip-pricing hidden" data-time-card-target="description"><%= time_travel.short_description %></h5>
     </div>
   </div>
   <div class="card" class="co-4 col-sm-6 col-md-4 mb-3">
-    <%# <h5 class="card-trip-pricing"><%= time_travel.short_description %></h5>
-
     <%= link_to "Portal", "#", class: "btn-style" %>
   </div>
 </div>
