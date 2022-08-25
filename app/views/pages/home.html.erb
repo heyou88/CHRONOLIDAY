@@ -17,6 +17,13 @@
     <%= render "layouts/shared/card_index", time_travel: time_travel  %>
   <% end %>
 </div>
-<div class="time_banner">
-  <%= link_to "Show all",  time_travels_path, class: "btn btn-main" %>
-</div>
+
+<% if current_user %>
+  <div class="time_banner">
+    <%= link_to "Show all",  time_travels_path, class: "btn btn-main" %>
+  </div>
+<% else %>
+  <div class="time_banner">
+    <%= link_to "Register",  new_user_registration_path, class: "btn btn-main" %>
+  </div>
+<% end %>
