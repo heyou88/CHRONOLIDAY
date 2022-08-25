@@ -1,14 +1,30 @@
-<h1>time travel</h1>
-<h2><%= @time_travel.name %></h2>
-<h4><%= @time_travel.location %></h4>
-<h4><%= @time_travel.period_of_time %></h4>
-<p><%= @time_travel.short_description %></p>
-<%= @time_travel.detailed_description %>
+<div class="page-container-show">
+  <div class="travel-card">
+    <div class="header-container">
+      <div class="header-section">
+        <h2><%= @time_travel.name %></h2>
+        <h4 class="grey-text"><%= @time_travel.period_of_time %></h4>
+      </div>
+      <h4><%= @time_travel.location %></h4>
+    </div>
+    <div class="card-body">
+      <div class="card-text-button-container">
+        <p><%= @time_travel.detailed_description %></p>
+        <%= link_to "book", new_user_booking_path(current_user, time_travel: @time_travel.id), class: "btn btn-main" %>
+      </div>
+      <% if @time_travel.img_url %>
+        <%= image_tag @time_travel.img_url, alt: @time_travel.name %>
+      <% else %>
+        <%= image_tag "tangdynasty.jpg", alt: "Tang Dynasty image" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 
 
-<%= link_to "back to home page", root_path %>
+<%# link_to "back to home page", root_path %>
 
-<%= link_to "back to time travels", time_travels_path %>
-<%= link_to "book", new_user_booking_path(current_user, time_travel: @time_travel.id) %>
+<%# link_to "back to time travels", time_travels_path %>
+<%# link_to "book", new_user_booking_path(current_user, time_travel: @time_travel.id) %>
