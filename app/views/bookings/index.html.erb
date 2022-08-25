@@ -1,8 +1,8 @@
 <h3>My bookings</h3>
-<% @bookings.each do |booking| %>
-      <%= link_to time_travel_bookings_path(booking) do %>
-           <%= booking.start_date %>
-            <% end %>
-            <% end %>
- <%= link_to "back to time travels", time_travels_path %>
- <%= link_to "back to home page", root_path %>
+<div>
+  <% @booking.each do |book| %>
+    <%= booking.time_travel  %>
+  <% end %>
+</div>
+<%= link_to "home", root_path %>
+<%= link_to "back to time travels", time_travels_path %>

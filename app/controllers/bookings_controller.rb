@@ -3,26 +3,28 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
   end
-  def new
+
+  def new(time_travel)
+    raise
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.save
+    @time_travel = Time_travel.find(params[:time_travel_id])
+    @booking.user = current_user
+    @booking.time_travel = @time_travel
+    if @booking.save
     # booking path set to the right path
-    redirect_to booking_path(@booking)
+    redirect_to user_bookings_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @booking =  Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_path, status: :see_others
-  end
-
-
-  private
-  def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    redirect_to user_bookings_path(current_user), status: :see_others
   end
 end
