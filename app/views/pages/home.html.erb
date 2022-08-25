@@ -1,14 +1,14 @@
 <div class="home-banner">
   <div class="text-container">
-    <h1>Welcome to Chronolidays</h1>
-    <h3>The only place to experience a real historical holiday</h3>
+    <h1>Welcome to Chronoliday</h1>
+    <h3>Escape the present and travel the past</h3>
   </div>
 </div>
 
 <div class="container text-block">
-  <h2>What is this all about and why you should choose us</h2>
-  <h5>  The time has come. After years of secret experimentation in a dusty Berlin Loft at Le Wagon, time travelling has become reality. Our company Chronoliday found a way to send you back in time and offer you a unique experience.
-For a period of one week you will live the life of a time traveller.  Our agents have selected some nice events from the past . If things get too dangerous you can always come back by activating the emergency button that we will implant you during your prep week.</h5>
+  <h2>A dream come true</h2>
+  <h5> People have dreamt of this for thousands of years. Now this dream has come true. After years of secret experimentation in a dusty Berlin Loft at Le Wagon, time travelling has become reality. Our company Chronoliday found a way to send you back in time and offer you a unique experience.
+  For a period of one week you will live the life of a time traveller. Our agents have selected some thrilling events from the past. It's challenging but trust the progress. If things get too dangerous you can always come back by activating the emergency button that we will implant you during your prep week.</h5>
 </div>
 
 <%# Show details of time travel events %>
@@ -16,5 +16,7 @@ For a period of one week you will live the life of a time traveller.  Our agents
   <% @time_travels.each do |time_travel| %>
     <%= render "layouts/shared/card_index", time_travel: time_travel  %>
   <% end %>
-  <%= link_to "Show all",  time_travels_path, class: "btn btn-primary" %>
+</div>
+<div class="time_banner">
+  <%= link_to "Show all",  time_travels_path, class: "btn btn-main" %>
 </div>
