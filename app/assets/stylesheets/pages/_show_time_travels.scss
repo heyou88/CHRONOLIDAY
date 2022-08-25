@@ -1,0 +1,16 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(210, 215, 159);
+}
+
+.travel-card {
+  background-color: white;
+  width: 90%;
+  border-radius: 15px;
+  height: 100%;
+  // margin: 15px 25px;
+  padding: 25px;
+}
