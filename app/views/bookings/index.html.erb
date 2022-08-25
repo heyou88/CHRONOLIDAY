@@ -1,7 +1,8 @@
 <h3>My bookings</h3>
 <div>
   <% @booking.each do |book| %>
-    <%= booking.time_travel  %>
+     <%= render "layouts/shared/card_index", time_travel: book.time_travel  %>
+     <%= link_to "delete", booking_path(book), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
   <% end %>
 </div>
 <%= link_to "home", root_path %>
