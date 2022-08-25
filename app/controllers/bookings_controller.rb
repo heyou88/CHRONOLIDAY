@@ -4,14 +4,16 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def new(time_travel)
-    raise
+  def new
     @booking = Booking.new
+    @time_travel = TimeTravel.find(params[:time_travel])
+    @booking.user = current_user
+    @booking.time_travel
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @time_travel = Time_travel.find(params[:time_travel_id])
+    @time_travel = Time_travel.find(params[:time_travel])
     @booking.user = current_user
     @booking.time_travel = @time_travel
     if @booking.save
