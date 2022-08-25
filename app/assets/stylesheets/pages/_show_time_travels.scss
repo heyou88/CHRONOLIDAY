@@ -1,4 +1,4 @@
-.page-container {
+.page-container-show {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -10,7 +10,38 @@
   background-color: white;
   width: 90%;
   border-radius: 15px;
-  height: 100%;
-  // margin: 15px 25px;
+  // height: 100%;
+  margin: 25px 0;
   padding: 25px;
+}
+
+.header-container {
+  margin-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  img {
+    max-width: 400px;
+  }
+}
+
+.card-text-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  p {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
 }
