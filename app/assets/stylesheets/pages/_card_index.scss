@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .image {
   width: 300px;
@@ -33,17 +35,16 @@
   justify-content: center;
   font-size: 1rem;
   color: #fff;
-  background-color: rgb(73, 174, 132);
+  background-color: rgb(66, 133, 91);
   font-size: 1.2rem;
   text-decoration: none;
   width: 100%;
   height: 45px;
   color: #fff;
-}
-
-.btn-style:hover {
-  color: #fff;
-  background-color: rgba(73, 174, 132, 0.8);
+  &:hover {
+    color: #fff;
+    background-color: rgb(144, 183, 125);
+  }
 }
 
 .styled:active {
