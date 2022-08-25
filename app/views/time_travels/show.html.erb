@@ -11,4 +11,4 @@
 <%= link_to "back to home page", root_path %>
 
 <%= link_to "back to time travels", time_travels_path %>
-<%= link_to "book" %>
+<%= link_to "book", new_user_booking_path(current_user, time_travel: @time_travel.id) %>
