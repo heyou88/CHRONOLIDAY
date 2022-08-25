@@ -1,9 +1,9 @@
-<h1>See All Time travels </h1>
 
-<div class="cards">
-  <% @time_travels.each do |time_travel| %>
-    <%= render "layouts/shared/card_index", time_travel: time_travel  %>
-  <% end %>
+<div class="page-container">
+  <h2>See all time travel trips </h2>
+  <div class="cards-container">
+    <% @time_travels.each do |time_travel| %>
+      <%= render "layouts/shared/card_index", time_travel: time_travel  %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "back to home page", root_path %>
