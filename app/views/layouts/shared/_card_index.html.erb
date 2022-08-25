@@ -1,10 +1,13 @@
 <div class="content">
-  <div>
-    <%= image_tag "tangdynasty.jpg", alt: "tangdynasty", class: "image"  %>
+  <div class= "image">
+    <%#<%= image_tag "tangdynasty.jpg", alt: "tangdynasty", class: "image"  %>
+    <div class= "caption">
+      <h4><%= time_travel.name %></h4>
+    </div>
   </div>
   <div class="card" class="co-4 col-sm-6 col-md-4 mb-3">
-    <h2 class="card-trip-pricing"><%= time_travel.name %></h2>
-    <a href="#" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">book</a>
-    <%#button type="button" class="btn btn-secondary btn-sm"><%=link_to "book" %></button>
+    <h5 class="card-trip-pricing"><%= time_travel.short_description %></h5>
+
+    <button class="favorite styled" type="button"><%=link_to "Portal" %></button>
    </div>
 </div>
