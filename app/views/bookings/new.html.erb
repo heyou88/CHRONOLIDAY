@@ -1,8 +1,0 @@
-  <h3>Add a time_travel to your booking</h3>
-        <%= simple_form_for [@time_travel, @booking] do |f| %>
-          <%= f.input :comment, placeholder: 'Enter a comment about the time_travel' %>
-          <%= f.association :time_travel, prompt: "Select a time_travel", input_html: {data: { controller: "tom-select"}} %>
-          <%= f.submit %>
-        <% end %>
-
-        f.input :time_travel_id, collection: @time_travels
