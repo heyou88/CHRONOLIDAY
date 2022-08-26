@@ -10,7 +10,7 @@
     <div class="card-body">
       <div class="card-text-button-container">
         <p><%= @time_travel.detailed_description %></p>
-        <%= link_to "book", new_user_booking_path(current_user, time_travel: @time_travel.id), class: "btn btn-main" %>
+        <%= link_to "book", new_user_booking_path(current_user, time_travel: @time_travel.id), class: "glow-on-hover" %>
       </div>
       <% if @time_travel.img_url %>
         <%= image_tag @time_travel.img_url, alt: @time_travel.name %>
