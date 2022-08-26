@@ -6,4 +6,12 @@
       <h5 class="card-trip-pricing hidden" data-time-card-target="description"><%= time_travel.short_description %></h5>
     </div>
   </div>
+  <% if current_user && (current_user.time_travels.include?(time_travel)) %>
+    <div class="quick-fix">
+      <%= link_to "Activate", "https://openprocessing.org/sketch/632969", class: "glow-on-hover"%>
+      <%= link_to "Delete", "#", class: "glow-on-hover", style: "background-color: red" %>
+    </div>
+  <% elsif current_user %>
+    <%= link_to "Portal", time_travel_path(time_travel), class: "glow-on-hover"%>
+  <% end %>
 </div>
