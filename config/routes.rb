@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :time_travels, only: [:index, :show]
   resources :bookings, only: :destroy
+
 end

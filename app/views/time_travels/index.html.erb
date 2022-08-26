@@ -3,7 +3,7 @@
   <h2>See all time travel trips </h2>
   <div class="cards-container">
     <% @time_travels.each do |time_travel| %>
-      <%= render "layouts/shared/card_index", time_travel: time_travel  %>
+      <%= render "layouts/shared/card_index", time_travel: time_travel, url: time_travel_path(time_travel), link_text: "Portal" %>
     <% end %>
   </div>
 </div>

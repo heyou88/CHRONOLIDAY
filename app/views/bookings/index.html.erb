@@ -1,9 +1,23 @@
-<h3>My bookings</h3>
-<div>
-  <% @booking.each do |book| %>
-     <%= render "layouts/shared/card_index", time_travel: book.time_travel  %>
-     <%= link_to "delete", booking_path(book), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
-  <% end %>
+
+<div class="container">
+  <div class="row justify-content-center">
+     <div class="col-12 col-sm-10">
+          <div>
+            <h3>My bookings</h3>
+            <% @booking.each do |book| %>
+              <div  class="row justify-content-center align-items-end">
+                <div class="col-12 col-md-10">
+                  <% ext_url = "https://openprocessing.org/sketch/632969" %>
+                  <%= render "layouts/shared/card_index", time_travel: book.time_travel, url: ext_url, link_text: "activate" %>
+                </div>
+                <div  class="col-12 col-md-2">
+                  <%= link_to "delete", booking_path(book), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?"}, class: "glow-on-hover" %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <%= link_to "home", root_path, class: "btn btn-main" %>
+          <%= link_to "back to all", time_travels_path, class: "btn btn-main" %>
+      </div>
+    </div>
 </div>
-<%= link_to "home", root_path %>
-<%= link_to "back to time travels", time_travels_path %>
