@@ -42,5 +42,4 @@
 .DS_Store
 
 # Difference between arm & x86 processors
-Gemfile.lock
 .env*
