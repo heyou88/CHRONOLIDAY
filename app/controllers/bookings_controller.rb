@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   # how to see details of each time travel on the page of booking index?
   def index
-    @booking = Booking.all
+    @bookings = Booking.all
   end
 
   def new
@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking =  Booking.find(params[:id])
+    @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to user_bookings_path(current_user), status: :see_other
   end
