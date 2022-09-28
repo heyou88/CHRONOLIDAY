@@ -1,1 +1,1 @@
-an app give you opportunity to book the time traveling
+An app give you the opportunity to book the time travels
