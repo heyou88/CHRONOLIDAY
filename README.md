@@ -1,3 +1,4 @@
+<div align="center">
 <h3>Built with:</h3>
 <ul>
   <li>html</li>
@@ -5,3 +6,4 @@
   <li>Ruby on Rails</li>
 <ul>
 <h3>screen shot:</h3>
+  </div>
