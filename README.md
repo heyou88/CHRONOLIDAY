@@ -1,9 +1,8 @@
 
-<h3>Built with:</h3>
-<ul>
-  <li>html</li>
-  <li>css</li>
-  <li>Ruby on Rails</li>
-<ul>
-<h3>screen shot:</h3>
+<h1>Project:</h1>
+A fantasy app that gives user opportunities to book different time travels
+ http://www.sitpet4bed.space/
+ <h1>Tools:</h1>
+ html, css, Javascript,Ruby on rails...
+ <h1>Screen Shot:</h1>
  
