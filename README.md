@@ -4,4 +4,4 @@
   <li>css</li>
   <li>Ruby on Rails</li>
 <ul>
-  <h3>screen shot:</h3>
+<h3>screen shot:</h3>
